@@ -1,0 +1,45 @@
+package cs235.mindreader;
+
+public class Counter {
+	private int heads;
+	private int tails;
+
+	// Constructs a counter object with an integer value for heads and tails
+	public Counter(int heads, int tails) {
+		setHeads(heads);
+		setTails(tails);
+	}
+
+	// Set heads
+	public void setHeads(int heads) {
+		if (heads >= 0) {
+			this.heads = heads;
+		} else {
+			throw new IllegalArgumentException("Must be a positive number");
+		}
+	}
+
+	// Return heads (int)
+	public int getHeads() {
+		return heads;
+	}
+
+	// Set tails
+	public void setTails(int tails) {
+		if (tails >= 0) {
+			this.tails = tails;
+		} else {
+			throw new IllegalArgumentException("Must be a positive number");
+		}
+	}
+
+	// Return tails (int)
+	public int getTails() {
+		return tails;
+	}
+
+	// Specially formatted for output to "profile.txt"
+	public String toString() {
+		return this.getHeads() + " " + this.getTails();
+	}
+}
